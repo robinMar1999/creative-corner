@@ -13,9 +13,7 @@ app.use(express.json({ extended: false }));
 app.use(express.static(path.join(paths.rootDir(), "public")));
 
 app.get("/", (req, res) => {
-  res.render("index", {
-    data: "my data",
-  });
+  res.send("<h1>My Page</h1>")
 });
 
 app.use(homeRoutes);
